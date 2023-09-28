@@ -31,6 +31,7 @@
     <p>90's Loose Fit Jeans</p>
     <img src="https://calvinklein.scene7.com/is/image/CalvinKlein/15569030_400_main" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
     <img src="https://calvinklein.scene7.com/is/image/CalvinKlein/15569030_400_main" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+
     <style>
       
 <style>
@@ -73,7 +74,8 @@
     extraButton.style.display = currentText === 'Not in stock' ? 'block' : 'none';
     extraButton2.style.display = currentText === 'Not in stock' ? 'block' : 'none';
   }
-// Add event listeners to the buttons
+
+  // Add event listeners to the buttons
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const customText = button.getAttribute('data-text');
@@ -98,3 +100,35 @@
   updateExtraButton();
 
 </script>
+
+
+  </header>
+
+ <!-- Ask for Assistance -->
+    <h3 class="w3-padding-24">Need Help?</h3>
+    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="button"></i>Ring a Store Associate
+    </button>
+
+  <!-- Recommendations Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey">Before You Go</h2>
+    <p> Complete the Look </p>
+    <hr class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="https://calvinklein.scene7.com/is/image/CalvinKlein/13404430_101_main?wid=720&hei=948&qlt=80%2C0&resMode=sharp2&op_usm=0.9%2C1.0%2C8%2C0&iccEmbed=0&fmt=webp" style="width:100%">
+        <p>Smooth Cotton Rib Tank Top</p>
+        <img src="https://calvinklein.scene7.com/is/image/CalvinKlein/36200736_230_alternate3?wid=720&hei=948&qlt=80%2C0&resMode=sharp2&op_usm=0.9%2C1.0%2C8%2C0&iccEmbed=0&fmt=webp" style="width:100%">
+        <p>Modern Tote Bag</p>
+      </div>
+
+    <!-- End photo grid -->
+    </div>
+  <!-- End Recommendation Section -->
+  </div>
+
+</body>
+</html>
