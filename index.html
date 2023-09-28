@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    .bgimg {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('https://calvinklein.scene7.com/is/image/CalvinKlein/15569030_400_main.jpg');
+      min-height: 100%;
+    }
+    </style>
+  </head>
+<body>
+
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Scanned Product -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Calvin Klein</b></h1>
+    <p>90's Loose Fit Jeans</p>
+    <img src="https://calvinklein.scene7.com/is/image/CalvinKlein/15569030_400_main" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="https://calvinklein.scene7.com/is/image/CalvinKlein/15569030_400_main" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    <style>
+      
+<style>
+  /* Initially, hide the content */
+  #content, #extraButton, #extraButton2 {
+    display: none;
+  }
+</style>
+
+<button class="w3-button w3-light-grey w3-padding-large w3-margin-top" id="button1" data-text="In Stock">
+  <i class="button"></i>28
+</button>
+<button class="w3-button w3-light-grey w3-padding-large w3-margin-top" id="button2" data-text="In Stock">
+  <i class="button"></i>29
+</button>
+<button class="w3-button w3-light-grey w3-padding-large w3-margin-top" id="button3" data-text="In Stock">
+  <i class="button"></i>30
+</button>
+<button class="w3-button w3-light-grey w3-padding-large w3-margin-top" id="button4" data-text="Not in stock">
+  <i class="button"></i>31
+</button>
+<button class="w3-button w3-light-grey w3-padding-large w3-margin-top" id="button5" data-text="In Stock">
+  <i class="button"></i>32
+</button>
+
+<div id="content"></div>
+<button id="extraButton" class="w3-button w3-light-grey w3-padding-large w3-margin-top">Order Online</button>
+<button id="extraButton2" class="w3-button w3-light-grey w3-padding-large w3-margin-top">Order to Store</button>
+
+<script>
+  // Get references to the buttons and content area
+  const buttons = document.querySelectorAll('.w3-button');
+  const content = document.getElementById('content');
+  const extraButton = document.getElementById('extraButton');
+  const extraButton2 = document.getElementById('extraButton2');
+
+  // Function to update the extra button based on the content
+  function updateExtraButton() {
+    const currentText = content.innerText;
+    extraButton.style.display = currentText === 'Not in stock' ? 'block' : 'none';
+    extraButton2.style.display = currentText === 'Not in stock' ? 'block' : 'none';
+  }
+// Add event listeners to the buttons
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const customText = button.getAttribute('data-text');
+      content.innerText = customText;
+      content.style.display = 'block';
+      updateExtraButton();
+    });
+  });
+
+  // Add event listener to the extra button for navigation
+  extraButton.addEventListener('click', () => {
+    window.location.href = 'orderonline.html';
+  });
+
+  // Add event listener to the extra button for navigation
+  extraButton2.addEventListener('click', () => {
+    // Change 'newPage.html' to the URL of the page you want to navigate to
+    window.location.href = 'shiptostore.html';
+  });
+
+  // Initial check to show/hide the extra button
+  updateExtraButton();
+
+</script>
